@@ -1,0 +1,162 @@
+1)
+mkdir pro1
+cd pro1
+git init
+notepad file.txt
+git add file.txt
+git commit -m "commit 1"
+
+2)
+mkdir pro2
+cd pro2
+git init
+notepad file.txt
+git add file.txt
+git commit -m "commit 1"
+git checkout -b new
+notepad file.txt
+git add file.txt
+git commit -m "commit in new"
+git checkout master
+git merge new
+git show
+
+3)
+mkdir stash
+cd stash
+git init
+notepad file1.txt
+git add file1.txt
+git commit -m "first commit"
+notepad file1.txt
+git add file1.txt
+git stash save "stash changes"
+git checkout -b new
+git stash apply
+git add file1.txt
+git commit -m "applied stash changes"
+git status
+git log --oneline
+
+4)
+git init
+- vi filename // create/update new file
+- git add filename // add to staging area
+- git commit -m "commit message here"
+-> git clone <URL>
+
+5)
+mkdir git5
+cd git5
+git init
+notepad file1.txt
+git add file1.txt
+git commit -m "first commit"
+git remote add origin <repo-url>
+git fetch origin
+git rebase origin/main
+git push -u origin master:main
+
+6)
+mkdir prog6
+cd prog6
+git init
+notepad file.txt
+git add file.txt
+git commit -m "hello1"
+git checkout -b new1
+notepad file.txt
+git add file.txt
+git commit -m "hello2"
+git checkout master
+git merge new1 -m "custom message here"
+git log --oneline
+
+7)
+mkdir pro7
+cd pro7
+git init
+notepad file.txt
+git add file.txt
+git commit -m "commit 1"
+notepad file.txt
+git add file.txt
+git commit -m "commit 2"
+notepad file.txt
+git add file.txt
+git commit -m "commit 3"
+git tag v1.0
+git tag v1.0.1 <commit id>
+git tag
+git log --oneline
+
+8)
+mkdir prog8
+cd prog8
+git init
+git checkout -b satish
+notepad file88.txt
+git add file88.txt
+git commit -m "commit m"
+git checkout master
+git cherry-pick <commit-id>
+
+9)
+mkdir prog9
+cd prog9
+git init
+notepad file.txt
+git add file.txt
+git commit -m "commit 1"
+notepad file.txt
+git add file.txt
+git commit -m "commit 2"
+notepad file.txt
+git add file.txt
+git commit -m "commit 3"
+git log --oneline
+git show <commit-id>
+git log -n 1 <commit-id>
+
+10)
+mkdir author
+cd author
+git init
+notepad file.txt
+git add file.txt
+git commit --author="jhondoe <jhondoe@gmail.com>" -m "commit 1"
+notepad file.txt
+git add file.txt
+git commit --author="jhondoe <jhondoe@gmail.com>" -m "commit 2"
+git log --author="jhondoe" --since="2025-01-01" --until="2026-12-12"
+
+11)
+mkdir prog11
+cd prog11
+git init
+notepad file.txt
+git add file.txt
+git commit -m "commit 1"
+notepad file.txt
+git add file.txt
+git commit -m "commit 2"
+notepad file.txt
+git add file.txt
+git commit -m "commit 3"
+notepad file.txt
+git add file.txt
+git commit -m "commit 4"
+git log -n 4
+
+12)
+mkdir prog12
+cd prog12
+git init
+notepad file.txt
+git add file.txt
+git commit -m "commit 1"
+notepad file.txt
+git add file.txt
+git commit -m "commit 2"
+git log --oneline
+git revert <commit-id>
